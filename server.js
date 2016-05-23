@@ -1,4 +1,5 @@
 var express = require('express');
+var port = process.env.PORT || 3000;
 var bodyParser = require('body-parser');
 var request = require('request');
 var app = express();
@@ -49,6 +50,6 @@ app.post('/webhook/', function (req, res) {
   res.sendStatus(200);
 });
 
-app.listen(3000, function () {
+app.listen(port, function () {
   console.log('Fb Bot Test app listening on port 3000!');
 });
